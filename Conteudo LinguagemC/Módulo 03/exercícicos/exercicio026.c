@@ -2,38 +2,38 @@
 #include <locale.h>
 #include <string.h>
 
+
 void main(){
-    setlocale(LC_ALL, "Portuguese");
+        setlocale(LC_ALL, "Portuguese");
+        printf("{ EXERCÍCIO 024 - Qual é o seu estado? }");
+		printf("\nEm que estado do Brasil você nasceu? ");
+		char estado [4];
+		gets(estado);
+		strupr(&estado);
 
-    //DECLARAÇÃO DAS VARIAVEIS
-    char estado[2];
-
-    printf("<<< EX026 - Qual é o seu Estado >>>");
-    printf("\n\nEm que estado do Brasil você nasceu? ");
-    gets(estado);
-    strupr(&estado);
-    printf("\n----------------------------------------------------");
-
-    //CONDIÇÃO
-    if(estado == "RJ"){
-            printf("\nNascendo em %s você é FLUMINENSE", estado);
-    } else if(estado == "SP"){
-           printf("\nNascendo em %s você é PAULISTA", estado);
-    } else if (estado == "MG"){
-           printf("\nNascendo em %s você é MINEIRO", estado);
-    } else if (estado == "ES"){
-           printf("\nNascendo em %s você é CAPIXABA", estado);
-    } else if (estado == "BH"){
-           printf("\nNascendo em %s você é BAHIANO", estado);
-    } else if (estado == "RS"){
-           printf("\nNascendo em %s você é GAÚCHO", estado);
-    } else if (estado == "GO"){
-           printf("\nNascendo em %s você é GOIANO", estado);
-    } else if (estado == "SC"){
-           printf("\nNascendo em %s você é CATARINENSE", estado);
+		printf("\nNascendo em %s", estado);
+		if((strcmp(strupr(estado), "RJ") == 0)){
+            printf(" você é FLUMINENSE");
+    } else if((strcmp(strupr(estado), "SP") == 0)){
+           printf(" você é PAULISTA");
+    } else if ((strcmp(strupr(estado), "MG") == 0)){
+           printf(" você é MINEIRO");
+    } else if ((strcmp(strupr(estado), "ES") == 0)){
+           printf(" você é CAPIXABA");
+    } else if ((strcmp(strupr(estado), "BH") == 0)){
+           printf(" você é BAHIANO");
+    } else if ((strcmp(strupr(estado), "RG") == 0)){
+           printf(" você é GAÚCHO");
+    } else if ((strcmp(strupr(estado), "GO") == 0)){
+           printf(" você é GOIANO");
+    } else if ((strcmp(strupr(estado), "SC") == 0)){
+           printf(" você é CATARINENSE");
     } else {
            printf("\nVocê é natural de sua cidade , mas ainda não sei como te chamar!");
     }
     printf("\n----------------------------------------------------");
+
+
+
 
 }
